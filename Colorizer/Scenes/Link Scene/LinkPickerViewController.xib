@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LinkPickerViewController" customModule="Colorizer" customModuleProvider="target">
+            <connections>
+                <outlet property="navigationView" destination="HVK-64-9NW" id="4jL-B6-rIb"/>
+                <outlet property="textView" destination="QR6-Wy-T1X" id="h6B-Wf-JTV"/>
+                <outlet property="textViewBottomLayoutConstraint" destination="dIQ-04-wEh" id="zQt-Pk-Rse"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HVK-64-9NW" customClass="NavigationView" customModule="Colorizer" customModuleProvider="target">
+                    <rect key="frame" x="35" y="79" width="344" height="50"/>
+                    <color key="backgroundColor" name="Black"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Ck5-5G-tXB"/>
+                    </constraints>
+                </view>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QR6-Wy-T1X">
+                    <rect key="frame" x="35" y="164" width="344" height="663"/>
+                    <color key="backgroundColor" name="Black"/>
+                    <color key="textColor" name="White"/>
+                    <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="24"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="URL" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="url"/>
+                </textView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="Black"/>
+            <constraints>
+                <constraint firstItem="HVK-64-9NW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="35" id="6dF-NI-K4V"/>
+                <constraint firstItem="QR6-Wy-T1X" firstAttribute="top" secondItem="HVK-64-9NW" secondAttribute="bottom" constant="35" id="CMd-A5-y13"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="QR6-Wy-T1X" secondAttribute="trailing" constant="35" id="QL0-zi-V50"/>
+                <constraint firstItem="QR6-Wy-T1X" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="35" id="cUc-7f-Fps"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="QR6-Wy-T1X" secondAttribute="bottom" constant="35" id="dIQ-04-wEh"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="HVK-64-9NW" secondAttribute="trailing" constant="35" id="jsB-ts-L87"/>
+                <constraint firstItem="HVK-64-9NW" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="35" id="l5v-KE-E30"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="87.723214285714278"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="Black">
+            <color red="0.059000000357627869" green="0.059000000357627869" blue="0.059000000357627869" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="White">
+            <color red="0.94099998474121094" green="0.94099998474121094" blue="0.94099998474121094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

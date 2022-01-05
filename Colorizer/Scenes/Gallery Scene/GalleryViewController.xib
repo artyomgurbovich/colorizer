@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GalleryViewController" customModule="Colorizer" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="Uoe-LM-cHH" id="ykb-Nm-1LE"/>
+                <outlet property="navigationView" destination="jbs-Mq-o5s" id="cnY-50-7lm"/>
+                <outlet property="segmentedControl" destination="HFv-dX-J5n" id="aOq-XW-YCC"/>
+                <outlet property="selectionView" destination="6V7-dz-tyt" id="xC0-Gh-ooC"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Uoe-LM-cHH">
+                    <rect key="frame" x="35" y="104" width="344" height="698"/>
+                    <color key="backgroundColor" name="Black"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="BWN-iq-gzn">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="HFv-dX-J5n" customClass="RoundedSegmentedControl" customModule="Colorizer" customModuleProvider="target">
+                    <rect key="frame" x="35" y="777" width="344" height="51"/>
+                    <color key="backgroundColor" name="Black"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="YFN-yX-Lmj"/>
+                    </constraints>
+                    <segments>
+                        <segment title="Menu"/>
+                        <segment title="Gallery"/>
+                    </segments>
+                    <color key="selectedSegmentTintColor" name="White"/>
+                    <connections>
+                        <action selector="segmentedControlChanged" destination="-1" eventType="valueChanged" id="lNr-E8-GFv"/>
+                    </connections>
+                </segmentedControl>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6V7-dz-tyt" customClass="NavigationView" customModule="Colorizer" customModuleProvider="target">
+                    <rect key="frame" x="35" y="777" width="344" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="KjG-At-tey"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jbs-Mq-o5s" customClass="NavigationView" customModule="Colorizer" customModuleProvider="target">
+                    <rect key="frame" x="35" y="79" width="344" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="0Lf-KA-oya"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="Black"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Uoe-LM-cHH" secondAttribute="trailing" constant="35" id="2Qt-Px-1jG"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Uoe-LM-cHH" secondAttribute="bottom" constant="60" id="6cc-SH-hIZ"/>
+                <constraint firstItem="jbs-Mq-o5s" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="35" id="8vo-ln-OQF"/>
+                <constraint firstItem="jbs-Mq-o5s" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="35" id="AcN-8L-0pC"/>
+                <constraint firstItem="6V7-dz-tyt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="35" id="BsS-eX-4Xd"/>
+                <constraint firstItem="HFv-dX-J5n" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="35" id="HZ7-6k-Sja"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="HFv-dX-J5n" secondAttribute="bottom" constant="35" id="KID-JZ-ULZ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="HFv-dX-J5n" secondAttribute="trailing" constant="35" id="MiL-wm-MDn"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="6V7-dz-tyt" secondAttribute="bottom" constant="35" id="Shh-SY-KdK"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6V7-dz-tyt" secondAttribute="trailing" constant="35" id="VHt-dH-BZj"/>
+                <constraint firstItem="Uoe-LM-cHH" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="60" id="aoL-ki-HNh"/>
+                <constraint firstItem="Uoe-LM-cHH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="35" id="fzC-P5-enl"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jbs-Mq-o5s" secondAttribute="trailing" constant="35" id="xSn-rL-BRF"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="87.723214285714278"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="Black">
+            <color red="0.059000000357627869" green="0.059000000357627869" blue="0.059000000357627869" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="White">
+            <color red="0.94099998474121094" green="0.94099998474121094" blue="0.94099998474121094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

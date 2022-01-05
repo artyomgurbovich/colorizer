@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AccessViewController" customModule="Colorizer" customModuleProvider="target">
+            <connections>
+                <outlet property="allowButton" destination="12l-rH-MkC" id="g5F-32-KoE"/>
+                <outlet property="buttonsStackView" destination="yNg-J1-4xS" id="Z3N-IL-GZf"/>
+                <outlet property="imageHeightConstraint" destination="Tq2-Io-Xhf" id="3Hz-GW-GhZ"/>
+                <outlet property="imageView" destination="MA8-X2-iGB" id="ykl-93-ZVE"/>
+                <outlet property="infoLabel" destination="D5R-4V-XWn" id="RJp-xy-ECB"/>
+                <outlet property="skipButton" destination="aeJ-jX-Mqd" id="gQO-hp-gI8"/>
+                <outlet property="topConstraint" destination="bu2-67-kPS" id="9jM-qR-OyP"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="yNg-J1-4xS">
+                    <rect key="frame" x="119.5" y="712" width="175" height="115"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="12l-rH-MkC">
+                            <rect key="frame" x="0.0" y="0.0" width="175" height="50"/>
+                            <color key="backgroundColor" name="White"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="175" id="XPx-Uc-VVC"/>
+                                <constraint firstAttribute="height" constant="50" id="gc7-DT-wZV"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="24"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Allow">
+                                <color key="titleColor" name="Black"/>
+                            </state>
+                            <connections>
+                                <action selector="allowButtonTapped" destination="-1" eventType="touchUpInside" id="fd7-PJ-Rcm"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aeJ-jX-Mqd">
+                            <rect key="frame" x="0.0" y="65" width="175" height="50"/>
+                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="24"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Skip">
+                                <color key="titleColor" name="White"/>
+                            </state>
+                            <connections>
+                                <action selector="skipTapped" destination="-1" eventType="touchUpInside" id="NBY-eg-Si8"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Camera" translatesAutoresizingMaskIntoConstraints="NO" id="MA8-X2-iGB">
+                    <rect key="frame" x="20" y="164" width="374" height="160"/>
+                    <color key="tintColor" name="White"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="160" id="Tq2-Io-Xhf"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allow camera usage to take photos for colorization within the app." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D5R-4V-XWn">
+                    <rect key="frame" x="20" y="344" width="374" height="84.5"/>
+                    <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="24"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="Black"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="MA8-X2-iGB" secondAttribute="trailing" constant="20" id="1gB-l1-ZVv"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="yNg-J1-4xS" secondAttribute="bottom" constant="35" id="521-Xt-3JP"/>
+                <constraint firstItem="D5R-4V-XWn" firstAttribute="top" secondItem="MA8-X2-iGB" secondAttribute="bottom" constant="20" id="Edr-fb-Ufp"/>
+                <constraint firstItem="D5R-4V-XWn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="GXz-Em-vyr"/>
+                <constraint firstItem="MA8-X2-iGB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="P4S-uq-dS0"/>
+                <constraint firstItem="yNg-J1-4xS" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="bfY-q8-hsQ"/>
+                <constraint firstItem="MA8-X2-iGB" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="120" id="bu2-67-kPS"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="D5R-4V-XWn" secondAttribute="trailing" constant="20" id="cA8-Ks-sdK"/>
+            </constraints>
+            <point key="canvasLocation" x="138.46153846153845" y="67.535545023696685"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Camera" width="100" height="90"/>
+        <namedColor name="Black">
+            <color red="0.059000000357627869" green="0.059000000357627869" blue="0.059000000357627869" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="White">
+            <color red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

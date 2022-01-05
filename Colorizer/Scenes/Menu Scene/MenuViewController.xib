@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MenuViewController" customModule="Colorizer" customModuleProvider="target">
+            <connections>
+                <outlet property="menuStackView" destination="nwT-JW-5jV" id="vpl-k7-F8o"/>
+                <outlet property="navigationView" destination="gOu-Ab-v8x" id="MQ8-S0-3dI"/>
+                <outlet property="segmentedControl" destination="mRU-oT-A01" id="XCz-d3-5eB"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outletCollection property="stackViews" destination="Hgt-fq-tzu" collectionClass="NSMutableArray" id="YJE-lx-dCl"/>
+                <outletCollection property="stackViews" destination="noX-FK-uJw" collectionClass="NSMutableArray" id="pk5-ej-A30"/>
+                <outletCollection property="titleLabels" destination="VPd-VB-wWQ" collectionClass="NSMutableArray" id="LZD-c8-VtH"/>
+                <outletCollection property="titleLabels" destination="ZC3-jo-YTT" collectionClass="NSMutableArray" id="Jvv-7I-ivq"/>
+                <outletCollection property="titleLabels" destination="Jh4-ba-YWy" collectionClass="NSMutableArray" id="fiP-0B-bJA"/>
+                <outletCollection property="titleLabels" destination="H5F-FP-bW4" collectionClass="NSMutableArray" id="ayE-Ez-hqH"/>
+                <outletCollection property="stackViews" destination="hyI-Vv-sPO" collectionClass="NSMutableArray" id="t1L-be-zjl"/>
+                <outletCollection property="stackViews" destination="e8Y-Be-08m" collectionClass="NSMutableArray" id="M7K-0Y-00S"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mRU-oT-A01" customClass="RoundedSegmentedControl" customModule="Colorizer" customModuleProvider="target">
+                    <rect key="frame" x="35" y="777" width="344" height="51"/>
+                    <color key="backgroundColor" name="Black"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="V2W-FR-yap"/>
+                    </constraints>
+                    <segments>
+                        <segment title="Menu"/>
+                        <segment title="Gallery"/>
+                    </segments>
+                    <color key="selectedSegmentTintColor" name="White"/>
+                    <connections>
+                        <action selector="segmentedControlChanged" destination="-1" eventType="valueChanged" id="nE7-le-J9u"/>
+                    </connections>
+                </segmentedControl>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gOu-Ab-v8x" customClass="NavigationView" customModule="Colorizer" customModuleProvider="target">
+                    <rect key="frame" x="35" y="79" width="344" height="50"/>
+                    <color key="backgroundColor" name="Black"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Cwu-cn-FTL"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="nwT-JW-5jV">
+                    <rect key="frame" x="35" y="228.5" width="344" height="439"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="MsM-eC-7Oe">
+                            <rect key="frame" x="0.0" y="0.0" width="344" height="209.5"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Hgt-fq-tzu">
+                                    <rect key="frame" x="0.0" y="0.0" width="162" height="209.5"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Camera" translatesAutoresizingMaskIntoConstraints="NO" id="vP6-1B-Xnf">
+                                            <rect key="frame" x="25" y="25" width="112" height="101"/>
+                                            <color key="tintColor" name="Black"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="vP6-1B-Xnf" secondAttribute="height" multiplier="10:9" id="FK0-f3-PJ0"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Camera" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="VPd-VB-wWQ">
+                                            <rect key="frame" x="25" y="151" width="112" height="28.5"/>
+                                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="24"/>
+                                            <color key="textColor" name="Black"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" name="White"/>
+                                    <edgeInsets key="layoutMargins" top="25" left="25" bottom="30" right="25"/>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="noX-FK-uJw">
+                                    <rect key="frame" x="182" y="0.0" width="162" height="209.5"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Photo" translatesAutoresizingMaskIntoConstraints="NO" id="Euc-8I-2mF">
+                                            <rect key="frame" x="25" y="25" width="112" height="101"/>
+                                            <color key="tintColor" name="Black"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="Euc-8I-2mF" secondAttribute="height" multiplier="10:9" id="Yyd-lY-sU5"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="ZC3-jo-YTT">
+                                            <rect key="frame" x="25" y="151" width="112" height="28.5"/>
+                                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="24"/>
+                                            <color key="textColor" name="Black"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" name="White"/>
+                                    <edgeInsets key="layoutMargins" top="25" left="25" bottom="30" right="25"/>
+                                </stackView>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="HCg-wd-tbP">
+                            <rect key="frame" x="0.0" y="229.5" width="344" height="209.5"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="hyI-Vv-sPO">
+                                    <rect key="frame" x="0.0" y="0.0" width="162" height="209.5"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="File" translatesAutoresizingMaskIntoConstraints="NO" id="sTM-TG-aB8">
+                                            <rect key="frame" x="25" y="25" width="112" height="101"/>
+                                            <color key="tintColor" name="Black"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="sTM-TG-aB8" secondAttribute="height" multiplier="10:9" id="6wp-tK-oQj"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Files" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="Jh4-ba-YWy">
+                                            <rect key="frame" x="25" y="151" width="112" height="28.5"/>
+                                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="24"/>
+                                            <color key="textColor" name="Black"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" name="White"/>
+                                    <edgeInsets key="layoutMargins" top="25" left="25" bottom="30" right="25"/>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="e8Y-Be-08m">
+                                    <rect key="frame" x="182" y="0.0" width="162" height="209.5"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Link" translatesAutoresizingMaskIntoConstraints="NO" id="6Ry-W0-1br">
+                                            <rect key="frame" x="25" y="25" width="112" height="101"/>
+                                            <color key="tintColor" name="Black"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="6Ry-W0-1br" secondAttribute="height" multiplier="10:9" id="pCR-gA-HMq"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Link" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="H5F-FP-bW4">
+                                            <rect key="frame" x="25" y="151" width="112" height="28.5"/>
+                                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="24"/>
+                                            <color key="textColor" name="Black"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" name="White"/>
+                                    <edgeInsets key="layoutMargins" top="25" left="25" bottom="30" right="25"/>
+                                </stackView>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="Black"/>
+            <constraints>
+                <constraint firstItem="gOu-Ab-v8x" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="35" id="6QZ-bl-CRj"/>
+                <constraint firstItem="nwT-JW-5jV" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" priority="750" id="8II-SN-Oh1"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mRU-oT-A01" secondAttribute="trailing" constant="35" id="EO2-Dd-DwQ"/>
+                <constraint firstItem="mRU-oT-A01" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="35" id="LfB-U9-BGQ"/>
+                <constraint firstItem="nwT-JW-5jV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="35" id="NEX-Kj-PTc"/>
+                <constraint firstItem="gOu-Ab-v8x" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="35" id="Owt-d7-7m2"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="nwT-JW-5jV" secondAttribute="trailing" constant="35" id="gVZ-2p-bfR"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="mRU-oT-A01" secondAttribute="bottom" constant="35" id="oy9-ga-GWt"/>
+                <constraint firstItem="nwT-JW-5jV" firstAttribute="top" relation="greaterThanOrEqual" secondItem="gOu-Ab-v8x" secondAttribute="bottom" constant="35" id="rGv-GX-DrP"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gOu-Ab-v8x" secondAttribute="trailing" constant="35" id="tpm-Sz-iKH"/>
+                <constraint firstItem="nwT-JW-5jV" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" priority="750" id="yKi-kT-6wK"/>
+                <constraint firstItem="mRU-oT-A01" firstAttribute="top" relation="greaterThanOrEqual" secondItem="nwT-JW-5jV" secondAttribute="bottom" constant="35" id="zVV-iB-bha"/>
+            </constraints>
+            <point key="canvasLocation" x="137.2037914691943" y="87.692307692307693"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Camera" width="100" height="90"/>
+        <image name="File" width="100" height="90"/>
+        <image name="Link" width="100" height="90"/>
+        <image name="Photo" width="100" height="90"/>
+        <namedColor name="Black">
+            <color red="0.059000000357627869" green="0.059000000357627869" blue="0.059000000357627869" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="White">
+            <color red="0.94099998474121094" green="0.94099998474121094" blue="0.94099998474121094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
