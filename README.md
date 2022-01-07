@@ -1,5 +1,13 @@
 # Colorizer
 
+### [Design](https://www.figma.com/file/ufAwSG5s43QSmBPFIFmj9j/Colorizer?node-id=0%3A1)
+
+
+
+https://user-images.githubusercontent.com/46649107/148598260-366c83e5-34a0-4eef-be3b-f981d102baeb.mp4
+
+
+
 ### Description:
 
 An app to colorize black and white images, get a color palette, and save the result to an in-app gallery. The color palette shows the primary colors of the colorized images. The in-app gallery allows you to access all colorized images.
